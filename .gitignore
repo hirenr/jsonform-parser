@@ -1,5 +1,8 @@
 node_modules
 dist
-.yarn
 .pnp.*
 .env
+
+.yarn/*
+!.yarn/releases
+!.yarn/releases/yarn-4.9.1.cjs
