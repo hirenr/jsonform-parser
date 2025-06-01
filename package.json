@@ -1,0 +1,33 @@
+{
+  "name": "jsonform-parser",
+  "version": "0.1.0",
+  "description": "Parse JSON Schema into form field configs (e.g. for TanStack)",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./tanstack": {
+      "import": "./dist/tanstack/index.mjs",
+      "require": "./dist/tanstack/index.cjs",
+      "types": "./dist/tanstack/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest",
+    "version": "changeset version && yarn build",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "tsup": "^7.2.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.2.0"
+  },
+  "license": "MIT"
+}
