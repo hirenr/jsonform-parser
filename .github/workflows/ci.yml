@@ -14,10 +14,10 @@ jobs:
         with:
           node-version: 20
           cache: yarn
-      - name: Set up Yarn (v3+)
+      - name: Enable Corepack + install project Yarn version
         run: |
           corepack enable
-          yarn set version stable
+          corepack prepare yarn@4.9.1 --activate
           yarn --version
       - name: Install dependencies
         run: yarn install --immutable
